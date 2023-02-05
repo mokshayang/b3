@@ -10,6 +10,6 @@ foreach ($_POST['id'] as $key => $id) {
         $row['ani'] = $_POST['ani'][$key];
         $Trailer->save($row);
     }
-    $row['sh'] = (isset($_POST['sh']) && in_array($id, $_POST['sh'])) ? 1 : 0;
+   
 }
 to("../back.php?do=trailer");

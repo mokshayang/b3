@@ -13,7 +13,7 @@
     .grid {
         display: grid;
         width: 100%;
-        grid-template-columns: 2fr 3fr;
+        grid-template-columns: 1fr 1fr;
         border: 1px solid #fff;
         border-radius: 5px;
         justify-items: center;
@@ -24,14 +24,15 @@
     .item {
         display: grid;
         grid-auto-rows: 20px 30px  20px 20px;
+        justify-self: start;
     }
 
     .all {
         display: grid;
         height: 340px;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 170px 150px;
-        grid-gap: 5px;
+        grid-template-rows: 160px 160px;
+        grid-gap: 10px;
 
     }
     .bb {
@@ -39,7 +40,8 @@
     }
     .gg img{
         border-radius: 3px;
-        box-shadow: 0 0 1px #ccc;
+        box-shadow: 0 0 2px #ccc;
+        cursor: pointer;
     }
 </style>
 
@@ -61,7 +63,7 @@
             ?>
                 <div class="grid">
                     <div class="gg">
-                        <img src="./upload/<?= $row['poster'] ?>" width="80px">
+                        <img src="./upload/<?= $row['poster'] ?>" width="80px" onclick="location.href='?do=intro&id=<?= $row['id'] ?>'">
                     </div>
                     <div class="item">
                         <div><?= $row['name'] ?></div>
